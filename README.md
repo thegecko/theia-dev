@@ -1,5 +1,7 @@
 # Theia Application
 
+An example Theia application setup
+
 ## Prerequisites
 
 [Node.js > v8.11.1](https://nodejs.org), [nvm](https://github.com/creationix/nvm) is recommended.
