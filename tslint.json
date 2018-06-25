@@ -1,0 +1,26 @@
+{
+    "extends": [
+        "tslint:recommended",
+        "tslint-eslint-rules",
+        "./theia/configs/errors.tslint.json",
+        "./theia/configs/warnings.tslint.json"
+    ],
+    "rules": {
+        "array-bracket-spacing": [true, "always"],
+        "block-spacing": [true, "always"],
+        "brace-style": [true, "1tbs", { "allowSingleLine": true }],
+        "interface-name": [true, "never-prefix"],
+        "linebreak-style": [true, "LF"],
+        "member-ordering": [true, { "order": ["static-field", "instance-field", "constructor", "static-method", "instance-method"] }],
+        "no-bitwise": [false],
+        "no-console": [true],
+        "no-unused-variable": [true],
+        "object-curly-spacing": [true, "always"],
+        "ordered-imports": false,
+        "object-literal-shorthand": false,
+        "object-literal-sort-keys": false,
+        "quotemark": [false],
+        "ter-indent": [true, 4, {"SwitchCase": 1}],
+        "ter-no-irregular-whitespace": [true]
+    }
+}

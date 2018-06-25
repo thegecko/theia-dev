@@ -1,0 +1,30 @@
+{
+  "name": "@app/about",
+  "description": "Application About Plugin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "yarn compile && yarn lint",
+    "compile": "tsc -p tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.36",
+    "rimraf": "^2.6.2",
+    "typescript": "~2.8.3",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^4.1.1"
+  },
+  "dependencies": {
+    "@theia/core": "0.3.11",
+    "electron": "1.8.2-beta.5"
+  },
+  "theiaExtensions": [{
+    "frontend": "lib/frontend",
+    "backend": "lib/backend-browser",
+    "backendElectron": "lib/backend-electron"
+  }]
+}

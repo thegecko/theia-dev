@@ -1,0 +1,37 @@
+{
+  "name": "@app/application",
+  "description": "Application",
+  "private": true,
+  "scripts": {
+    "prepare": "lerna run prepare",
+    "rebuild:browser": "theia rebuild:browser",
+    "rebuild:electron": "theia rebuild:electron",
+    "watch:browser": "lerna run --parallel --scope @app/* watch & lerna run watch:browser",
+    "watch:electron": "lerna run --parallel --scope @app/* watch & lerna run watch:electron",
+    "test": "lerna run test --scope @app/*",
+    "clean": "lerna run clean",
+    "clean:all": "lerna run clean && lerna clean --yes && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/jsdom": "^11.0.4",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.0",
+    "@types/sinon": "^2.3.5",
+    "@types/temp": "^0.8.29",
+    "chai": "^4.1.0",
+    "concurrently": "^3.5.0",
+    "jsdom": "^11.5.1",
+    "lerna": "^2.4.0",
+    "mocha": "^3.4.2",
+    "rimraf": "^2.6.1",
+    "sinon": "^3.3.0",
+    "temp": "^0.8.3"
+  },
+  "workspaces": [
+    "theia/dev-packages/ext-scripts",
+    "theia/packages/core",
+    "packages/*",
+    "apps/*"
+  ]
+}

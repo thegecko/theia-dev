@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Watch Browser",
+            "command": "yarn",
+            "args": [
+                "watch:browser"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch Electron",
+            "command": "yarn",
+            "args": [
+                "watch:electron"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

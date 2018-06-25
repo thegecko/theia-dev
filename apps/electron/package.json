@@ -1,0 +1,33 @@
+{
+  "name": "@app/electron",
+  "description": "Electron Application",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src-gen/frontend/electron-main.js",
+  "scripts": {
+    "prepare": "theia build",
+    "build": "theia build --mode development",
+    "start": "theia start --no-cluster",
+    "watch:electron": "theia build --watch --mode=development",
+    "clean": "rimraf lib && rimraf src-gen && rimraf webpack.config.js"
+  },
+  "devDependencies": {
+    "@theia/cli": "0.3.11",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@app/about": "0.1.0",
+    "@theia/core": "0.3.11",
+    "@theia/filesystem": "0.3.11",
+    "@theia/preferences": "0.3.11",
+    "@theia/navigator": "0.3.11",
+    "@theia/process": "0.3.11",
+    "@theia/editor": "0.3.11",
+    "@theia/monaco": "0.3.11",
+    "@theia/messages": "0.3.11",
+    "@theia/git": "0.3.11"
+  },
+  "theia": {
+    "target": "electron"
+  }
+}
